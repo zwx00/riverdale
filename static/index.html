@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=20, minimum-scale=0.5, maximum-scale=1">
     <title>Ljubljanica River Guide</title>
-<link rel="stylesheet" type="text/css" href="css/skeleton.css" />
+    <link rel="stylesheet" type="text/css" href="css/skeleton.css" />
+    <link rel="stylesheet" type="text/css" href="css/tango.css" />
 <style>
 html {
     margin: 0;
@@ -12,26 +13,7 @@ html {
     height: 100%;
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-.header {
-    width: 100%;
-    align-self: center;
-    text-align: center;
-    padding-top: 20px;
-    background-image: url("ljubljanica.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-bottom: 1px solid;
-}
-
 body {
-   color: white; 
     background: #0f2027; /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #0f2027, #203a43, #2c5364); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -43,37 +25,59 @@ body {
     margin: 0;
 }
 
+button {
+    text-align: left;
+    width: 95%;
+    max-width: 95%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.header {
+    width: 100%;
+    align-self: center;
+    text-align: center;
+    padding-top: 20px;
+    background-image: url("ljubljanica.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid;
+    border-color: #000;
+}
+
+h1 {
+    text-shadow: #000 0px 0px 4px;
+}
+
 .footer {
     text-align: right;
     padding-right: 10px;
     font-family: monospace;
 }
 
-button {
-    color: white;    
-    text-align: left;
-    width: 95%;
-    max-width: 95%;
-}
-
-button:hover {
-    color: gray;
-}
 .body {
     text-align: center;
     width: 100%;
     margin-bottom: auto;
 }
+
 .locations {
     justify-content: center;
-
     align-items: center;
     display: flex;
     flex-direction: column;
 }
+
 #sc-widget {
     display: none;
 }
+
 .control-buttons {
     padding-top: 20px;
     display: flex;
@@ -81,15 +85,14 @@ button:hover {
     padding-bottom: 20px;
     
 }
+
 .play-button {
     margin-right: 10px;
     text-align: center;
 }
+
 .pause-button {
     text-align: center;
-}
-h1 {
-    color: white;
 }
 </style>
 </head>
