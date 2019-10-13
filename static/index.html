@@ -50,6 +50,9 @@ button:hover {
     width: 70%;
     flex-direction: column;
 }
+#sc-widget {
+    display: none;
+}
 </style>
 </head>
     <iframe id='sc-widget' width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/695032036%3Fsecret_token%3Ds-m1s4z&color=%2364a4b4&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
@@ -64,6 +67,10 @@ button:hover {
         document.querySelectorAll('.skip-button').forEach(button => button.addEventListener('click', function () {
             widget.seekTo(button.getAttribute('data-seektime'));
         }));
+
+        document.querySelector('.play-button').addEventListener('click', function () {
+            widget.play();
+        })
     });
 
   }());
@@ -74,6 +81,7 @@ button:hover {
     </div>
     <div class="body">
         <div class="locations">
+        <button class="play-button">Predvajaj</button>
         <button data-seektime='14000' class="skip-button">Ljubljanska Trznica</button>
         <button data-seektime='101000' class="skip-button">Tromostovje</button>
         <button data-seektime='211000' class="skip-button">Ljubljanski Grad</button>
