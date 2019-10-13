@@ -6,12 +6,20 @@
 <link rel="stylesheet" type="text/css" href="css/skeleton.css" />
 <style>
 html {
+    margin: 0;
     height: 100%;
 }
 
 .header {
+    width: 100%;
     align-self: center;
-    margin-top: 20px;
+    text-align: center;
+    padding-top: 20px;
+    background-image: url("ljubljanica.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid;
 }
 
 body {
@@ -31,8 +39,6 @@ body {
     font-family: monospace;
 }
 
-h1 {
-}
 button {
     color: white;    
     text-align: left;
@@ -42,16 +48,33 @@ button {
 button:hover {
     color: gray;
 }
-
+.body {
+    text-align: center;
+    margin: 20px;
+}
 .locations {
-    padding-left: 40px;
     align-items: center;
     display: flex;
-    width: 70%;
     flex-direction: column;
 }
 #sc-widget {
     display: none;
+}
+.control-buttons {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+    
+}
+.play-button {
+    margin-right: 10px;
+    text-align: center;
+}
+.pause-button {
+    text-align: center;
+}
+h1 {
+    color: white;
 }
 </style>
 </head>
@@ -81,7 +104,10 @@ button:hover {
     </div>
     <div class="body">
         <div class="locations">
+        <div class="control-buttons">
         <button class="play-button">Predvajaj</button>
+        <button class="pause-button">Ustavi</button>
+        </div>
         <button data-seektime='14000' class="skip-button">Ljubljanska Trznica</button>
         <button data-seektime='101000' class="skip-button">Tromostovje</button>
         <button data-seektime='211000' class="skip-button">Ljubljanski Grad</button>
