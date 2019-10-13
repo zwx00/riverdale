@@ -103,6 +103,7 @@ h1 {
     widget.bind(SC.Widget.Events.READY, function() {
         document.querySelectorAll('.skip-button').forEach(button => button.addEventListener('click', function () {
             widget.seekTo(button.getAttribute('data-seektime'));
+            widget.play();
         }));
 
         document.querySelector('.pause-button').addEventListener('click', function () {
@@ -128,15 +129,15 @@ h1 {
         </div>
         <button data-seektime='14000' class="skip-button">Ljubljanska Trznica</button>
         <button data-seektime='101000' class="skip-button">Tromostovje</button>
-        <button data-seektime='211000' class="skip-button">Ljubljanski Grad</button>
-        <button data-seektime='297000' class="skip-button">Stara Ljubljana</button>
+        <button data-seektime='211500' class="skip-button">Ljubljanski Grad</button>
+        <button data-seektime='297500' class="skip-button">Stara Ljubljana</button>
         <button data-seektime='386000' class="skip-button">Arhitektura</button>
-        <button data-seektime='723000' class="skip-button">Geografija Slovenije</button>
-        <button data-seektime='1064000' class="skip-button">Nekaj Besed o Ljubljanici</button>
+        <button data-seektime='723200' class="skip-button">Geografija Slovenije</button>
+        <button data-seektime='1064300' class="skip-button">Nekaj Besed o Ljubljanici</button>
         <button data-seektime='1232000' class="skip-button">Zgodovina Ljubljanice</button>
-        <button data-seektime='1867000' class="skip-button">O Jazonovih Argonavtih</button>
-        <button data-seektime='2204000' class="skip-button">Mesarski Most</button>
-        <button data-seektime='2379000' class="skip-button">Presernov Trg</button>
+        <button data-seektime='1868000' class="skip-button">O Jazonovih Argonavtih</button>
+        <button data-seektime='2204000' class="skip-button">Cevljarski Most</button>
+        <button data-seektime='2379200' class="skip-button">Presernov Trg</button>
         <button data-seektime='2562000' class="skip-button">Zmajski Most</button>
     </div>
        </div>
