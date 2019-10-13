@@ -8,7 +8,7 @@
 <style>
 html {
     margin: 0;
-    width:100%;
+    width: 100%;
     height: 100%;
 }
 
@@ -16,6 +16,7 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
 }
 .header {
     width: 100%;
@@ -34,14 +35,11 @@ body {
     background: #0f2027; /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #0f2027, #203a43, #2c5364); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    display: flex;
     background-cover: cover;
-    height: 100%;
     background-repeat: no-repeat;
     width: 100%;
+    height: 100%;
     margin: 0;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .footer {
@@ -63,6 +61,7 @@ button:hover {
 .body {
     text-align: center;
     width: 100%;
+    margin-bottom: auto;
 }
 .locations {
     justify-content: center;
@@ -100,24 +99,24 @@ h1 {
             document.documentElement.requestFullscreen();
         </script>
     <script type="text/javascript">
-  (function(){
-    var widgetIframe = document.getElementById('sc-widget'),
-        widget       = SC.Widget(widgetIframe);
+        (function(){
+            var widgetIframe = document.getElementById('sc-widget'),
+                widget       = SC.Widget(widgetIframe);
+      
+      
+            widget.bind(SC.Widget.Events.READY, function() {
+                document.querySelectorAll('.skip-button').forEach(button => button.addEventListener('click', function () {
+                    widget.seekTo(button.getAttribute('data-seektime'));
+                    widget.play();
+                }));
 
+                document.querySelector('.pause-button').addEventListener('click', function () {
+                    widget.pause();
+                });
 
-    widget.bind(SC.Widget.Events.READY, function() {
-        document.querySelectorAll('.skip-button').forEach(button => button.addEventListener('click', function () {
-            widget.seekTo(button.getAttribute('data-seektime'));
-            widget.play();
-        }));
-
-        document.querySelector('.pause-button').addEventListener('click', function () {
-            widget.pause();
-        });
-
-        document.querySelector('.play-button').addEventListener('click', function () {
-            widget.play();
-        });
+                document.querySelector('.play-button').addEventListener('click', function () {
+                    widget.play();
+                });
     });
 
   }());
@@ -129,8 +128,8 @@ h1 {
     <div class="body">
         <div class="locations">
         <div class="control-buttons">
-        <button class="play-button">Predvajaj</button>
-        <button class="pause-button">Ustavi</button>
+            <button class="play-button">Predvajaj</button>
+            <button class="pause-button">Ustavi</button>
         </div>
         <button data-seektime='14000' class="skip-button">Ljubljanska Trznica</button>
         <button data-seektime='101000' class="skip-button">Tromostovje</button>
