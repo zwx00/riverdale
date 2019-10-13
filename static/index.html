@@ -6,6 +6,7 @@
     <title>Ljubljanica River Guide</title>
     <link rel="stylesheet" type="text/css" href="css/skeleton.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/tango.css" />
 <style>
 html {
@@ -15,6 +16,7 @@ html {
 }
 
 body {
+    font-family: serif;
     background: #0f2027; /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #0f2027, #203a43, #2c5364); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -30,9 +32,11 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: left;
     width: 95%;
+    letter-spacing: 0.36em;
     max-width: 95%;
+    font-size: 0.9rem;
+    font-family: 'Libre Baskerville', serif;
 }
 
 .wrapper {
@@ -43,7 +47,8 @@ button {
 }
 
 .header {
-    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.35);
+    font-family: 'Libre Baskerville', serif;
+    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.5);
     width: 100%;
     align-self: center;
     text-align: center;
@@ -57,7 +62,6 @@ button {
 }
 
 h1 {
-    text-shadow: #000 0px 0px 4px;
 }
 
 .footer {
@@ -88,7 +92,6 @@ h1 {
     display: flex;
     flex-direction: row;
     padding-bottom: 20px;
-    
 }
 
 .play-button {
@@ -140,7 +143,7 @@ h1 {
             <button class="play-button button-primary"><i class="material-icons">play_arrow</i></button>
             <button class="pause-button"><i class="material-icons">pause</i></button>
         </div>
-        <button data-seektime='14000' class="skip-button">Ljubljanska Trznica</button>
+        <button data-seektime='14000' class="skip-button">Ljubljanska Tržnica</button>
         <button data-seektime='101000' class="skip-button">Tromostovje</button>
         <button data-seektime='211500' class="skip-button">Ljubljanski Grad</button>
         <button data-seektime='297500' class="skip-button">Stara Ljubljana</button>
@@ -149,11 +152,11 @@ h1 {
         <button data-seektime='1064300' class="skip-button">Nekaj Besed o Ljubljanici</button>
         <button data-seektime='1232000' class="skip-button">Zgodovina Ljubljanice</button>
         <button data-seektime='1868000' class="skip-button">O Jazonovih Argonavtih</button>
-        <button data-seektime='2204000' class="skip-button">Cevljarski Most</button>
-        <button data-seektime='2379200' class="skip-button">Presernov Trg</button>
+        <button data-seektime='2204000' class="skip-button">Čevljarski Most</button>
+        <button data-seektime='2379200' class="skip-button">Prešernov Trg</button>
         <button data-seektime='2562000' class="skip-button">Zmajski Most</button>
     </div>
-       </div>
+    </div>
     <div class="footer">
         Copyright 2019
     </div>
